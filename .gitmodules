@@ -2,8 +2,11 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 [submodule "vim/pack/tpope/start/sensible"]
-	path = vim/pack/tpope/start/sensible
+	path = vim/pack/local/start/sensible
 	url = https://tpope.io/vim/sensible.git
 [submodule "zsh/zgen"]
 	path = zsh/zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "vim/pack/local/start/editorconfig-vim"]
+	path = vim/pack/local/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
