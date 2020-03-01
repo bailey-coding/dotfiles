@@ -23,6 +23,7 @@
     # ~/.config/git/gitconfig-work: git/gitconfig_work
     # ~/.tmux.conf: tmux/tmux.conf
     ~/.profile: shell/profile
+    ~/.zprofile: shell/profile
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
     ~/.zsh: zsh
