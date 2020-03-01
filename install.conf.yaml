@@ -23,6 +23,19 @@
     # ~/.tmux.conf: tmux/tmux.conf
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+    ~/.zsh: zsh
+    ~/.zshrc: zsh/zshrc
+    # I'm sure I'll need this
+    # ~/.hammerspoon:
+    #   if: '[ `uname` = Darwin ]'
+    #   path: hammerspoon
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+
+- shell:
+  - command: chsh -s $(which zsh)
+    description: Making zsh the default shell
+    stdin: true
+    stdout: true
+    stderr: true

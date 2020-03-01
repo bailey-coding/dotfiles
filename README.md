@@ -9,7 +9,6 @@ Done:
 - [vim](#vim)
 
 To do:
-- [bash](#bash)
 - [Kitty](#kitty)
 - [Mercurial](#mercurial)
 - [Tmux](#tmux)
@@ -17,16 +16,14 @@ To do:
 
 ## Configuration
 
-### Bash
-
-### Git
+### git
 
 ### Mercurial
 
-### Tmux
+### tmux
 
-### Vim
+### vim
 
 - [vim-sensible](https://github.com/tpope/vim-sensible)
 
-### ZSH
+### zsh

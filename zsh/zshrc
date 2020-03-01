@@ -1,0 +1,12 @@
+# load zgen
+source "${HOME}/.zsh/zgen/zgen.zsh"
+
+# if the init script doesn't exist
+if ! zgen saved; then
+
+  # specify plugins here
+  zgen oh-my-zsh
+
+  # generate the init script from plugins above
+  zgen save
+fi

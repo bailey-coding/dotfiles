@@ -4,3 +4,6 @@
 [submodule "vim/pack/tpope/start/sensible"]
 	path = vim/pack/tpope/start/sensible
 	url = https://tpope.io/vim/sensible.git
+[submodule "zsh/zgen"]
+	path = zsh/zgen
+	url = https://github.com/tarjoilija/zgen.git
