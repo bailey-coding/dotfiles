@@ -38,3 +38,10 @@ To do:
 Posts I found useful:
 
 - [Show all packages installed in NixOS](https://functor.tokyo/blog/2018-02-20-show-packages-installed-on-nixos)
+
+## Credits
+
+I took some inspiration from:
+
+- [@stormf's dotfiles](https://github.com/stormf/dotfiles)
+- [@jessfraz's dotfiles](https://github.com/jessfraz/dotfiles)
