@@ -1,0 +1,4 @@
+" Globally use smaller tabs
+set tabstop=2
+" if we wanted to do it for a filetype, we could do
+" autocmd Filetype css setlocal tabstop=4
