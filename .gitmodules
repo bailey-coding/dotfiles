@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "vim/pack/tpope/start/sensible"]
+	path = vim/pack/tpope/start/sensible
+	url = https://tpope.io/vim/sensible.git
