@@ -1,22 +1,5 @@
-# load zgen
-source "${HOME}/.zsh/zgen/zgen.zsh"
+# Load zgen for fast zsh plugins
+. "${HOME}/.zsh/zsh.d/zgen.zsh"
 
-# if the init script doesn't exist
-if ! zgen saved; then
-  echo "Creating a zgen save"
-
-  # specify plugins here
-  zgen oh-my-zsh
-
-  # better syntax highligthing for zsh itself
-  zgen load zdharma/fast-syntax-highlighting
-
-  # h allows you to highlight multiple words at once
-  zgen load paoloantinori/hhighlighter
-
-  # try use 256 colours if possible
-  zgen load chrissicool/zsh-256color
-
-  # generate the init script from plugins above
-  zgen save
-fi
+# Load fzf for fancier searching
+. "${HOME}/.zsh/zsh.d/fzf.zsh"
