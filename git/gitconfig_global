@@ -1,0 +1,7 @@
+[core]
+	editor = vim
+	excludesfile = ~/.config/git/gitignore
+[includeIf "gitdir:~/src/"]
+	path = ~/.config/git/gitconfig-personal
+[user]
+	useConfigOnly = true
