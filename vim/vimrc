@@ -2,3 +2,13 @@
 set tabstop=2
 " if we wanted to do it for a filetype, we could do
 " autocmd Filetype css setlocal tabstop=4
+
+" Use system clipboard
+set clipboard=unnamed
+
+" Moar colourzzzz
+set termguicolors
+
+" Solarized Light
+set background=light
+colorscheme solarized8
