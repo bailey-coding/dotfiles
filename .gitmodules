@@ -13,3 +13,9 @@
 [submodule "fzf"]
 	path = fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/themes/opt/solarized8"]
+	path = vim/pack/themes/opt/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "vim/pack/typescript/start/typescript-vim"]
+	path = vim/pack/typescript/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
