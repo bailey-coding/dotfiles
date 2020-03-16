@@ -1,5 +1,2 @@
 # Load zgen for fast zsh plugins
 . "${HOME}/.zsh/zsh.d/zgen.zsh"
-
-# Load fzf for fancier searching
-. "${HOME}/.zsh/zsh.d/fzf.zsh"

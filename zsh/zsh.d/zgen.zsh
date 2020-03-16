@@ -5,6 +5,15 @@ source "${HOME}/.zsh/zgen/zgen.zsh"
 if ! zgen saved; then
   echo "Creating a zgen save"
 
+  # Load fzf for fancier searching
+  . "${HOME}/.zsh/zsh.d/fzf.zsh"
+
+  # Potential Darwin addons
+  . "${HOME}/.zsh/zsh.d/darwin.zsh"
+
+  # Potential theme customisations
+  . "${HOME}/.zsh/zsh.d/theme.zsh"
+
   # specify plugins here
   zgen oh-my-zsh
 
