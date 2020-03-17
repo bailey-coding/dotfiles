@@ -1,2 +1,17 @@
 # Load zgen for fast zsh plugins
 . "${HOME}/.zsh/zsh.d/zgen.zsh"
+
+# Load fzf for fancier searching
+. "${HOME}/.zsh/zsh.d/fzf.zsh"
+
+# Potential Darwin addons
+. "${HOME}/.zsh/zsh.d/darwin.zsh"
+
+# CDPATH instead of aliases to different paths
+export CDPATH="${CDPATH}:${HOME}/src2:${HOME}/src:${HOME}/work:${HOME}/src/go/src"
+
+if [ -f "${HOME}/.zshrc-extras" ]; then
+	. "${HOME}/.zshrc-extras"
+else
+  echo "Missing zshrc-extras from private-dotfiles"
+fi

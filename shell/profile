@@ -35,3 +35,12 @@ fi
 if [ -e "${HOME}/.nix-profile/etc/profile.d/nix.sh" ]; then
     . "${HOME}/.nix-profile/etc/profile.d/nix.sh"
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export GOPATH="${HOME}/src/go"
+# set PATH so it includes go's bin if it exists
+if [ -d "${GOPATH}/bin" ]; then
+  PATH="${GOPATH}/bin:$PATH"
+fi
