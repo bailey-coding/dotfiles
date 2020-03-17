@@ -19,8 +19,7 @@
     ~/.gitconfig: git/gitconfig_global
     ~/.editorconfig: editorconfig
     ~/.config/git/gitignore: git/gitignore
-    ~/.config/git/gitconfig-personal: git/gitconfig_personal
-    # ~/.config/git/gitconfig-work: git/gitconfig_work
+    ~/.config/git/gitconfig-1: git/gitconfig_personal
     # ~/.tmux.conf: tmux/tmux.conf
     ~/.profile: shell/profile
     ~/.zprofile: shell/profile

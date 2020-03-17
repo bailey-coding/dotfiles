@@ -151,6 +151,14 @@
 	# Detect copies as well as renames
 	renames = copies
 
+[feature]
+
+	# Enable some fancy things
+	experimental = true
+
+	#scale
+	manyFiles = true
+
 [help]
 
 	# Automatically correct and execute mistyped commands
@@ -159,7 +167,17 @@
 [includeIf "gitdir:~/src/"]
 
 	# Load additional .git/config for personal repos
-	path = ~/.config/git/gitconfig-personal
+	path = ~/.config/git/gitconfig-3
+
+[includeIf "gitdir:~/src2/"]
+
+	# Load additional .git/config for other personal repos
+	path = ~/.config/git/gitconfig-1
+
+[includeIf "gitdir:~/work/"]
+
+	# Load additional .git/config for work repos
+	path = ~/.config/git/gitconfig-2
 
 [merge]
 

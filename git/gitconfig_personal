@@ -1,5 +1,5 @@
 [core]
-	sshCommand = ssh -i ~/.ssh/id_ed25519_b -F /dev/null
+	sshCommand = ssh -i ~/.ssh/id_ed25519_b -F /dev/null -l git
 [user]
 	name = justbaileym
 	email = justbaileym@users.noreply.github.com
