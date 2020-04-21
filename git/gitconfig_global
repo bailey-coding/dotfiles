@@ -189,36 +189,11 @@
 	# change to maching for machines with older versions of git 1.x.x
 	default = simple
 
-[url "git@github.com:github"]
-
-	insteadOf = "https://github.com/github"
-	insteadOf = "github:github"
-	insteadOf = "git://github.com/github"
-
-[url "git@github.com:"]
-
-	pushInsteadOf = "https://github.com/"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-
-	insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-
-	insteadOf = "gst:"
-	pushInsteadOf = "gist:"
-	pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-
-	insteadOf = "gist:"
-
 # Uncomment if you want fetch to also get all github pull requests, this is rather
 # large on big repos.
-#[remote "origin"]
-	#fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+# [remote "origin"]
+#
+# 	fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
 
 [user]
 

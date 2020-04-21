@@ -4,7 +4,7 @@ set tabstop=2
 " autocmd Filetype css setlocal tabstop=4
 
 " Solarized Light
-set background=light
+set background=dark
 colorscheme solarized8
 
 " Use system clipboard
@@ -29,3 +29,7 @@ let timer = timer_start(4000, 'UpdateStatusBar',{'repeat':-1})
 function! UpdateStatusBar(timer)
   execute 'let &ro = &ro'
 endfunction
+
+" show whitespace
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list

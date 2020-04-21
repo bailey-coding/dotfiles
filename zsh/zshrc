@@ -11,7 +11,9 @@
 export CDPATH="${CDPATH}:${HOME}/src2:${HOME}/src:${HOME}/work:${HOME}/src/go/src"
 
 if [ -f "${HOME}/.zshrc-extras" ]; then
-	. "${HOME}/.zshrc-extras"
+  . "${HOME}/.zshrc-extras"
 else
   echo "Missing zshrc-extras from private-dotfiles"
 fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

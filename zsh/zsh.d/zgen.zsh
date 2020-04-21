@@ -26,6 +26,9 @@ if ! zgen saved; then
   # agnoster theme
   zgen oh-my-zsh themes/agnoster
 
+  zgen load zsh-users/zsh-completions src
+  zgen load /usr/share/zsh/site-functions
+
 
   # generate the init script from plugins above
   zgen save
