@@ -17,3 +17,16 @@ else
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export DOCKER_BUILDKIT=1
+
+### History
+setopt extended_history hist_no_store hist_ignore_dups hist_expire_dups_first hist_find_no_dups inc_append_history share_history hist_reduce_blanks hist_ignore_space
+export HISTFILE=~/.zsh_history
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+
+### Some..  options
+setopt autocd beep extendedglob nomatch rc_quotes
+unsetopt notify

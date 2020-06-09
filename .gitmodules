@@ -19,3 +19,6 @@
 [submodule "vim/pack/typescript/start/typescript-vim"]
 	path = vim/pack/typescript/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/pack/vendor/start/nerdtree"]
+	path = vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
