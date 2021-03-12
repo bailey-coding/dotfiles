@@ -44,3 +44,4 @@ export GOPATH="${HOME}/src/go"
 if [ -d "${GOPATH}/bin" ]; then
   PATH="${GOPATH}/bin:$PATH"
 fi
+source "$HOME/.cargo/env"
