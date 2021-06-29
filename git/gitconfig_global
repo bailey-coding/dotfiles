@@ -146,10 +146,22 @@
 	trustctime = false
 	editor = vim
 
+	pager = delta
+
+[delta]
+
+	plus-color = "#012800"
+
+	minus-color = "#340001"
+
+	syntax-theme = Monokai Extended
+
 [diff]
 
 	# Detect copies as well as renames
 	renames = copies
+
+	colorMoved = default
 
 [feature]
 
@@ -158,6 +170,10 @@
 
 	#scale
 	manyFiles = true
+
+[gc]
+
+	 writeCommitGraph = true
 
 [help]
 
@@ -178,6 +194,14 @@
 
 	# Load additional .git/config for work repos
 	path = ~/.config/git/gitconfig-2
+
+[init]
+
+	defaultBranch = development
+
+[interactive]
+
+	# diffFilter = delta --color-only
 
 [merge]
 
