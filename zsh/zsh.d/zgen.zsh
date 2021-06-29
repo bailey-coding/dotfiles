@@ -29,7 +29,6 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-completions src
   zgen load /usr/share/zsh/site-functions
 
-
   # generate the init script from plugins above
   zgen save
 fi

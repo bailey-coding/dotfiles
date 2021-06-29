@@ -19,6 +19,7 @@ fi
 export PATH="/usr/local/go/bin:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin:${PATH}"
 
 export DOCKER_BUILDKIT=1
+export KUSTOMIZE_ENABLE_ALPHA_COMMANDS=true
 
 ### History
 setopt extended_history hist_no_store hist_ignore_dups hist_expire_dups_first hist_find_no_dups inc_append_history share_history hist_reduce_blanks hist_ignore_space
@@ -30,3 +31,11 @@ export SAVEHIST=1000000
 ### Some..  options
 setopt autocd beep extendedglob nomatch rc_quotes
 unsetopt notify
+
+. "$(brew --prefix asdf)/asdf.sh"
+
+export PATH="${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${PATH}"
+
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
