@@ -4,7 +4,7 @@ set tabstop=2
 " autocmd Filetype css setlocal tabstop=4
 
 " Solarized Light
-set background=dark
+set background=light
 colorscheme solarized8
 
 " Use system clipboard
