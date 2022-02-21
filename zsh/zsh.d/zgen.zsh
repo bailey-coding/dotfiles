@@ -11,8 +11,12 @@ if ! zgen saved; then
   # specify plugins here
   zgen oh-my-zsh
 
+  zgen oh-my-zsh plugins/man
+
   # better command-not-found errors
   zgen oh-my-zsh plugins/command-not-found
+
+  zgen oh-my-zsh plugins/rust
 
   # better syntax highligthing for zsh itself
   zgen load zdharma/fast-syntax-highlighting

@@ -39,3 +39,5 @@ export PATH="${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${PATH}"
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
+
+export BAT_THEME="Solarized (light)"
