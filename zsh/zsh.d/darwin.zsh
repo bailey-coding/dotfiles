@@ -1,3 +1,3 @@
 if [[ "$(uname -s)" == Darwin ]]; then
-  alias vim="mvim -v"
+  alias vim="nvim"
 fi

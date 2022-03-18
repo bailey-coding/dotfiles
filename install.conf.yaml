@@ -27,6 +27,7 @@
     ~/.vimrc: vim/vimrc
     ~/.zsh: zsh
     ~/.zshrc: zsh/zshrc
+    ~/.p10k.zsh: zsh/zsh.d/p10k.zsh
     # I'm sure I'll need this
     # ~/.hammerspoon:
     #   if: '[ `uname` = Darwin ]'

@@ -2,7 +2,7 @@
 source "${HOME}/.zsh/zgen/zgen.zsh"
 
 # Potential theme customisations
-. "${HOME}/.zsh/zsh.d/theme-before.zsh"
+# . "${HOME}/.zsh/zsh.d/theme-before.zsh"
 
 # if the init script doesn't exist
 if ! zgen saved; then
@@ -27,8 +27,7 @@ if ! zgen saved; then
   # try use 256 colours if possible
   zgen load chrissicool/zsh-256color
 
-  # agnoster theme
-  zgen oh-my-zsh themes/agnoster
+  zgen load romkatv/powerlevel10k powerlevel10k
 
   zgen load zsh-users/zsh-completions src
   zgen load /usr/share/zsh/site-functions
@@ -38,4 +37,4 @@ if ! zgen saved; then
 fi
 
 # Potential theme customisations
-. "${HOME}/.zsh/zsh.d/theme-after.zsh"
+# . "${HOME}/.zsh/zsh.d/theme-after.zsh"
