@@ -154,7 +154,7 @@
 
 	minus-style = normal "#340001"
 
-	syntax-theme = Monokai Extended
+	syntax-theme = Monokai Extended Light
 
 [diff]
 
@@ -219,6 +219,8 @@
 
 	# change to maching for machines with older versions of git 1.x.x
 	default = simple
+
+	autoSetupRemote = true
 
 # Uncomment if you want fetch to also get all github pull requests, this is rather
 # large on big repos.
