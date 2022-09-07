@@ -11,6 +11,8 @@
 - create:
     - ~/.config
     - ~/.config/git
+    - ~/.config/nvim
+    - ~/.config/kitty
     # - ~/downloads
     # - ~/.vim/undo-history
 

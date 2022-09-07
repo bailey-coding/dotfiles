@@ -39,7 +39,9 @@ export SAVEHIST=1000000
 setopt autocd beep extendedglob nomatch rc_quotes
 unsetopt notify
 
-. "$(brew --prefix asdf)/asdf.sh"
+if [[ "$(uname)" == "Darwin" ]]; then
+  . "$(brew --prefix asdf)/asdf.sh"
+fi
 
 export PATH="${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${PATH}"
 
@@ -65,3 +67,8 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+
+# added by Nix installer
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+  . $HOME/.nix-profile/etc/profile.d/nix.sh;
+fi
