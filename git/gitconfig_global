@@ -56,10 +56,10 @@
 	ft = "!f() { git describe --always --contains $1; }; f"
 
 	# Find commits by source code
-	fc = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
 
 	# Find commits by commit message
-	fm = "!f() { git log --pretty=format:'%C(yellow)%h	%Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
 	# Remove branches that have already been merged with master
 	# a.k.a. ‘delete merged’
@@ -146,15 +146,20 @@
 	trustctime = false
 	editor = vim
 
-	pager = delta
+[core]
+		pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+[add.interactive]
+	useBuiltin = false # required for git 2.37.0
 
 [delta]
+	navigate = true		# use n and N to move between diff sections
+	light = false			# set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 
-	plus-style = syntax "#012800"
-
-	minus-style = normal "#340001"
-
-	syntax-theme = Monokai Extended Light
+[merge]
+	conflictstyle = diff3
 
 [diff]
 
@@ -212,7 +217,7 @@
 
 [pull]
 
-  # Rebase on fetched branch by default
+	# Rebase on fetched branch by default
 	rebase = true
 
 [push]

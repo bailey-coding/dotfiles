@@ -25,11 +25,11 @@
     ~/.zprofile: shell/profile
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim: vim/init.vim
     ~/.zsh: zsh
     ~/.zshrc: zsh/zshrc
     ~/.p10k.zsh: zsh/zsh.d/p10k.zsh
     ~/.config/nvim/.vim: vim
-    ~/.config/nvim/init.vim: vim/vimrc
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
 
     # I'm sure I'll need this
