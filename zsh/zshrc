@@ -17,12 +17,6 @@ fi
 # CDPATH instead of aliases to different paths
 export CDPATH="${CDPATH}:${HOME}/src2:${HOME}/src:${HOME}/work:${HOME}/src/go/src"
 
-if [ -f "${HOME}/.zshrc-extras" ]; then
-  . "${HOME}/.zshrc-extras"
-else
-  echo "Missing zshrc-extras from private-dotfiles"
-fi
-
 export PATH="/usr/local/go/bin:${HOME}/.yarn/bin:${HOME}/.config/yarn/global/node_modules/.bin:${PATH}"
 
 export DOCKER_BUILDKIT=1
@@ -39,10 +33,6 @@ export SAVEHIST=1000000
 setopt autocd beep extendedglob nomatch rc_quotes
 unsetopt notify
 
-if [[ "$(uname)" == "Darwin" ]]; then
-  . "$(brew --prefix asdf)/asdf.sh"
-fi
-
 export PATH="${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${PATH}"
 
 if type rg &> /dev/null; then
@@ -53,18 +43,12 @@ export BAT_THEME="Solarized (light)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME=/opt/homebrew/Cellar/openjdk/17.0.2/libexec/openjdk.jdk/Contents/Home
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Created by `pipx` on 2022-04-28 16:07:08
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -72,5 +56,19 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
   . $HOME/.nix-profile/etc/profile.d/nix.sh;
 fi
-
 export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+export PACT_DO_NOT_TRACK=1
+export pact_do_not_track=1
+
+if [ -f "${HOME}/.zshrc-extras" ]; then
+  . "${HOME}/.zshrc-extras"
+else
+  echo "Missing zshrc-extras from private-dotfiles"
+fi
+
+
+# bun completions
+[ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"

@@ -148,11 +148,10 @@
 
 [core]
 		pager = delta
+	eol = crlf
 
 [interactive]
 	diffFilter = delta --color-only
-[add.interactive]
-	useBuiltin = false # required for git 2.37.0
 
 [delta]
 	navigate = true		# use n and N to move between diff sections
@@ -202,7 +201,7 @@
 
 [init]
 
-	defaultBranch = development
+	defaultBranch = main
 
 [interactive]
 
@@ -218,7 +217,8 @@
 [pull]
 
 	# Rebase on fetched branch by default
-	rebase = true
+  rebase = true
+  twohead = ort
 
 [push]
 
