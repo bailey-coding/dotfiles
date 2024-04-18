@@ -215,10 +215,9 @@
 	conflictStyle = diff3
 
 [pull]
-
 	# Rebase on fetched branch by default
-  rebase = true
-  twohead = ort
+	rebase = true
+	twohead = ort
 
 [push]
 
