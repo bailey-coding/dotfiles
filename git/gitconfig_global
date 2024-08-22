@@ -149,6 +149,7 @@
 [core]
 		pager = delta
 	eol = crlf
+	autocrlf = input
 
 [interactive]
 	diffFilter = delta --color-only
@@ -235,3 +236,10 @@
 [user]
 
 	useConfigOnly = true
+
+[filter "lfs"]
+
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
