@@ -17,6 +17,15 @@
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
+	# `git log` with patches shown with difftastic.
+	dlog = -c diff.external=difft log -p --ext-diff
+
+	# Show the most recent commit with difftastic.
+	dshow = -c diff.external=difft show --ext-diff
+
+	# `git diff` with difftastic.
+	ddiff = -c diff.external=difft diff
+
 	# Pull in remote changes for the current repository and all its submodules
 	p = !"git pull; git submodule foreach git pull origin master"
 
@@ -168,6 +177,12 @@
 
 	colorMoved = default
 
+	external = difft
+
+	# Set difftastic as the default difftool, so we don't need to specify
+	# `-t difftastic` every time.
+	tool = difftastic
+
 [feature]
 
 	# Enable some fancy things
@@ -237,9 +252,23 @@
 
 	useConfigOnly = true
 
-[filter "lfs"]
+[difftool "difftastic"]
 
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+	# See `man git-difftool` for a description of MERGED, LOCAL and REMOTE.
+	cmd = difft "$MERGED" "$LOCAL" "abcdef1" "100644" "$REMOTE" "abcdef2" "100644"
+
+[difftool]
+
+	# Run the difftool immediately, don't ask 'are you sure' each time.
+	prompt = false
+
+[pager]
+
+	# Use a pager if the difftool output is larger than one screenful,
+	# consistent with the behaviour of `git diff`.
+	difftool = true
+[merge "mergiraf"]
+
+	name = mergiraf
+
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P

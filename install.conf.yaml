@@ -20,6 +20,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig: git/gitconfig_global
     ~/.editorconfig: editorconfig
+    ~/.config/git/gitattributes: git/gitattributes
     ~/.config/git/gitignore: git/gitignore
     ~/.config/git/gitconfig-1: git/gitconfig_personal
     # ~/.tmux.conf: tmux/tmux.conf
