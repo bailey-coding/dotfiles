@@ -156,16 +156,22 @@
 	editor = vim
 
 [core]
-		pager = delta
+	pager = delta
 	eol = crlf
 	autocrlf = input
 
 [interactive]
 	diffFilter = delta --color-only
 
+[include]
+	path = ~/.config/delta/themes.gitconfig
+
 [delta]
+	# features = collared-trogon
+	features = weeping-willow zenburn
 	navigate = true		# use n and N to move between diff sections
-	light = false			# set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	# side-by-side = true
+	# light = true			# set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 
 [merge]
 	conflictstyle = diff3
@@ -177,11 +183,11 @@
 
 	colorMoved = default
 
-	external = difft
+	# external = difft
 
 	# Set difftastic as the default difftool, so we don't need to specify
 	# `-t difftastic` every time.
-	tool = difftastic
+	# tool = difftastic
 
 [feature]
 
@@ -261,6 +267,9 @@
 
 	# Run the difftool immediately, don't ask 'are you sure' each time.
 	prompt = false
+
+[mailmap]
+	file = "~/.config/git/mailmap"
 
 [pager]
 
