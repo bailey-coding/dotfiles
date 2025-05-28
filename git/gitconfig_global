@@ -110,6 +110,10 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
+[branch]
+
+	sort = -committerdate
+
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -135,9 +139,14 @@
 	changed = green
 	untracked = cyan
 
+[column]
+
+	ui = auto
+
 [commit]
 
 	# gpgsign = true
+	verbose = true
 
 [core]
 
@@ -155,10 +164,12 @@
 	trustctime = false
 	editor = vim
 
-[core]
 	pager = delta
 	eol = crlf
 	autocrlf = input
+
+	fsmonitor = true
+	untrackedCache = true
 
 [interactive]
 	diffFilter = delta --color-only
@@ -178,10 +189,12 @@
 
 [diff]
 
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+
 	# Detect copies as well as renames
 	renames = copies
-
-	colorMoved = default
 
 	# external = difft
 
@@ -196,6 +209,12 @@
 
 	#scale
 	manyFiles = true
+
+[fetch]
+
+	prune = true
+	pruneTags = true
+	all = true
 
 [gc]
 
@@ -248,11 +267,28 @@
 
 	autoSetupRemote = true
 
+	followTags = true
+
+	rebase = true
+
 # Uncomment if you want fetch to also get all github pull requests, this is rather
 # large on big repos.
 # [remote "origin"]
 #
 # 	fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+#
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[tag]
+
+	sort = version:refname
 
 [user]
 
