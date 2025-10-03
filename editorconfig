@@ -66,6 +66,5 @@ indent_size = 2
 [*.tf]
 indent_size = 2
 
-
 [.gitconfig]
 indent_style = tab
