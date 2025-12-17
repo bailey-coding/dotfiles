@@ -33,8 +33,6 @@ export SAVEHIST=1000000
 setopt autocd beep extendedglob nomatch rc_quotes
 unsetopt notify
 
-export PATH="${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${PATH}"
-
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
@@ -46,10 +44,7 @@ export BAT_THEME="Solarized (light)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.4.0/bin:/opt/homebrew/opt/sqlite/bin:${HOME}/.cargo/bin:${HOME}/.codeium/windsurf/bin:${HOME}/.mix/escripts:/usr/local/opt/ruby/bin:${HOME}/.local/bin:${PATH}"
 
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
@@ -75,6 +70,3 @@ fi
 [ -s "${HOME}/.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 export EDITOR=vim
-
-# Added by Windsurf
-export PATH="${HOME}/.codeium/windsurf/bin:$PATH"
