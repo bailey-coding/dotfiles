@@ -13,6 +13,9 @@
     - ~/.config/git
     - ~/.config/nvim
     - ~/.config/kitty
+    - ~/.config/agents
+    - ~/.config/zed
+    - ~/.config/karabiner
     # - ~/downloads
     # - ~/.vim/undo-history
 
@@ -34,6 +37,9 @@
     ~/.p10k.zsh: zsh/zsh.d/p10k.zsh
     ~/.config/nvim/.vim: vim
     ~/.config/kitty/kitty.conf: kitty/kitty.conf
+    ~/.config/agents/skills/browsing-filesystem: agents/skills/browsing-filesystem
+    ~/.config/zed/settings.json: zed/settings.json
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
 
     # I'm sure I'll need this
     # ~/.hammerspoon:

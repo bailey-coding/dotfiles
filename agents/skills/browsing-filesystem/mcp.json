@@ -1,0 +1,10 @@
+{
+  "filesystem": {
+    "command": "npx",
+    "args": [
+      "@modelcontextprotocol/server-filesystem",
+      "$HOME/work",
+      "$HOME/src"
+    ]
+  }
+}
